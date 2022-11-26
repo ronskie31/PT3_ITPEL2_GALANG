@@ -1,0 +1,69 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Record Update</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Edit Information </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      You can now edit the choosen student record.
+    </ion-card-content>
+  <ion-list>
+    
+    <ion-item>
+      <ion-label position="floating">Student Number</ion-label>
+      <ion-input [(ngModel)] = "student_no" type="text"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Student Name</ion-label>
+      <ion-input [(ngModel)] = "student_name" type="text"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Course</ion-label>
+      <ion-input [(ngModel)] = "course" type="text"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-select [(ngModel)] = "year" placeholder="Select Year">
+        <ion-select-option  value="First year">First year</ion-select-option>
+        <ion-select-option  value="Second year">Second year</ion-select-option>
+        <ion-select-option  value="Third year">Third year</ion-select-option>
+        <ion-select-option  value="Fourth year">Fourth year</ion-select-option>
+      </ion-select>
+    </ion-item>
+  
+    <ion-item>
+      <ion-label position="floating"> Email</ion-label>
+      <ion-input [(ngModel)] = "email" type="text"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating"> Contact Number</ion-label>
+      <ion-input [(ngModel)] = "contact_no" type="text"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating"> Address</ion-label>
+      <ion-input [(ngModel)] = "address" type="text"></ion-input>
+    </ion-item>
+      
+  <br>
+    <ion-row>
+      <ion-col>
+        <center>
+        <ion-button  color="warning" expand="full" shape="round"(click)="updateStudent()"><ion-icon name="checkmark-circle-outline"></ion-icon>Update</ion-button>
+       
+      </center>
+      </ion-col>
+    </ion-row>
+
+  </ion-list>
+  </ion-card>
+
+</ion-content>
